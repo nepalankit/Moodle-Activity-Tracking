@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLDB PATH="local/timetracker/db" VERSION="2024061300" COMMENT="Time Tracker Plugin" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://download.moodle.org/xmldb/xmldb.xsd">
+    <TABLES>
+        <TABLE NAME="local_timetracker" COMMENT="Table to track time spent by users on courses and modules">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" COMMENT="Primary key"/>
+                <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" COMMENT="ID of the user"/>
+                <FIELD NAME="courseid" TYPE="int" LENGTH="10" NOTNULL="true" COMMENT="ID of the course"/>
+                <FIELD NAME="moduleid" TYPE="int" LENGTH="10" NOTNULL="false" COMMENT="ID of the module"/>
+                <FIELD NAME="starttime" TYPE="int" LENGTH="10" NOTNULL="true" COMMENT="Start time of the session"/>
+                <FIELD NAME="endtime" TYPE="int" LENGTH="10" NOTNULL="true" COMMENT="End time of the session"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="Primary key"/>
+            </KEYS>
+        </TABLE>
+    </TABLES>
+</XMLDB>
